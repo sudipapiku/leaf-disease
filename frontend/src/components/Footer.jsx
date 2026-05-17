@@ -1,4 +1,6 @@
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer style={{
       borderTop: '1px solid var(--border)',
@@ -40,6 +42,20 @@ export default function Footer() {
             </a>
           ))}
         </div>
+        {/* Copyright */}
+        <div style={{
+          borderTop: '1px solid var(--border)',
+          paddingTop: 20,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 6,
+          alignItems: 'center',
+        }}>
+          <p style={{ color: 'rgba(125,171,138,0.5)', fontSize: '0.8rem' }}>
+            © {year} <strong style={{ color: 'var(--green-light)' }}>Sudipa Biswas</strong>. All rights reserved.
+          </p>
+        </div>
+
        
       </div>
     </footer>
